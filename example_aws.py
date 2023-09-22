@@ -65,10 +65,8 @@ if __name__ == "__main__":
         mlflow.log_metric("r2", r2)
         mlflow.log_metric("mae", mae)
 
-
-    
-        # For remote server only (Dagshub)
-        remote_server_uri = "https://dagshub.com/spcCodes/mlflow_tutorial2.mlflow"
+        # For remote server only (AWS)
+        remote_server_uri = "http://ec2-23-22-147-111.compute-1.amazonaws.com:5000/"
         mlflow.set_tracking_uri(remote_server_uri)
 
 
@@ -87,6 +85,5 @@ if __name__ == "__main__":
             
         mlflow.set_tag("tag1", "Base Elasticnet")
         mlflow.set_tag("tag2", "Base Elasticnet aplha 0.5")
-        mlflow.set_tag("tag3", "Model used alpha 0.3 and dagshub uri changed line 69,70")
         
         
